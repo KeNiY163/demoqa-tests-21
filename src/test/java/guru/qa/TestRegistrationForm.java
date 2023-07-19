@@ -24,12 +24,12 @@ public class TestRegistrationForm extends BaseTest{
         executeJavaScript("$('footer').remove()");
 
         //Ввод параметров в текстовые поля
-        $("#firstName").setValue(data.FIRSTNAME);
-        $("#lastName").setValue(data.LASTNAME);
-        $("#userEmail").setValue(data.EMAIL);
-        $("#userNumber").setValue(data.PHONE);
-        $("#currentAddress").setValue(data.CURRENT_ADDRESS);
-        $("#subjectsInput").setValue(data.SUBJECT).sendKeys(Keys.ENTER);
+        $("#firstName").setValue(data.firstname);
+        $("#lastName").setValue(data.lastname);
+        $("#userEmail").setValue(data.email);
+        $("#userNumber").setValue(data.phone);
+        $("#currentAddress").setValue(data.current_address);
+        $("#subjectsInput").setValue(data.subject).sendKeys(Keys.ENTER);
 
         //Выбор пола
         $("#genterWrapper").$(byText("Male")).click();
@@ -62,23 +62,23 @@ public class TestRegistrationForm extends BaseTest{
 
         //Проверки на соответствие введенных значений и полученного ответа в модальном окне.
         $(".table-responsive").$(byText("Student Name")).parent()
-                .shouldHave(text(data.FIRSTNAME + " " + data.LASTNAME));
+                .shouldHave(text(data.firstname + " " + data.lastname));
         $(".table-responsive").$(byText("Student Email")).parent()
-                .shouldHave(text(data.EMAIL));
+                .shouldHave(text(data.email));
         $(".table-responsive").$(byText("Gender")).parent()
                 .shouldHave(text("Male"));
         $(".table-responsive").$(byText("Mobile")).parent()
-                .shouldHave(text(data.PHONE));
+                .shouldHave(text(data.phone));
         $(".table-responsive").$(byText("Date of Birth")).parent()
                 .shouldHave(text("15 October,1995"));
         $(".table-responsive").$(byText("Subjects")).parent()
-                .shouldHave(text(data.SUBJECT));
+                .shouldHave(text(data.subject));
         $(".table-responsive").$(byText("Hobbies")).parent()
                 .shouldHave(text("Sports, Music"));
         $(".table-responsive").$(byText("Picture")).parent()
                 .shouldHave(text("foto.jpg"));
         $(".table-responsive").$(byText("Address")).parent()
-                .shouldHave(text(data.CURRENT_ADDRESS));
+                .shouldHave(text(data.current_address));
         $(".table-responsive").$(byText("State and City")).parent()
                 .shouldHave(text("Uttar Pradesh Merrut"));
 

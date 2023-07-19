@@ -3,7 +3,6 @@ package guru.qa;
 
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -24,12 +23,12 @@ public class TestRegistrationForm extends BaseTest{
         executeJavaScript("$('footer').remove()");
 
         //Ввод параметров в текстовые поля
-        $("#firstName").setValue(data.firstname);
-        $("#lastName").setValue(data.lastname);
+        $("#firstName").setValue(data.firstName);
+        $("#lastName").setValue(data.lastName);
         $("#userEmail").setValue(data.email);
         $("#userNumber").setValue(data.phone);
-        $("#currentAddress").setValue(data.current_address);
-        $("#subjectsInput").setValue(data.subject).sendKeys(Keys.ENTER);
+        $("#currentAddress").setValue(data.currentAddress);
+        $("#subjectsInput").setValue(data.subject).pressEnter();
 
         //Выбор пола
         $("#genterWrapper").$(byText("Male")).click();
@@ -62,7 +61,7 @@ public class TestRegistrationForm extends BaseTest{
 
         //Проверки на соответствие введенных значений и полученного ответа в модальном окне.
         $(".table-responsive").$(byText("Student Name")).parent()
-                .shouldHave(text(data.firstname + " " + data.lastname));
+                .shouldHave(text(data.firstName + " " + data.lastName));
         $(".table-responsive").$(byText("Student Email")).parent()
                 .shouldHave(text(data.email));
         $(".table-responsive").$(byText("Gender")).parent()
@@ -78,7 +77,7 @@ public class TestRegistrationForm extends BaseTest{
         $(".table-responsive").$(byText("Picture")).parent()
                 .shouldHave(text("foto.jpg"));
         $(".table-responsive").$(byText("Address")).parent()
-                .shouldHave(text(data.current_address));
+                .shouldHave(text(data.currentAddress));
         $(".table-responsive").$(byText("State and City")).parent()
                 .shouldHave(text("Uttar Pradesh Merrut"));
 

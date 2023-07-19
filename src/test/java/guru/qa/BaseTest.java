@@ -15,8 +15,6 @@ public class BaseTest {
         Configuration.pageLoadStrategy = "eager";
         Configuration.baseUrl = "https://demoqa.com";
 
-        System.out.println("123456778776675");
-
     }
 
     @AfterAll

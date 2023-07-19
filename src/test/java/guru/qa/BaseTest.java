@@ -5,7 +5,7 @@ import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
-public class BefforeAfterTesting {
+public class BaseTest {
 
     @BeforeAll
     public static void beforeAll(){
@@ -13,6 +13,9 @@ public class BefforeAfterTesting {
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
+        Configuration.baseUrl = "https://demoqa.com";
+
+        System.out.println("123456778776675");
 
     }
 

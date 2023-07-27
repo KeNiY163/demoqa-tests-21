@@ -8,10 +8,10 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class TestGitHub {
+public class TestGitHub extends BaseTest {
 
     @Test
-    void testGitHub(){
+    void testGitHub() {
 
         TestData data = new TestData();
 

@@ -16,7 +16,7 @@ public class TestRegistrationForm extends BaseTest{
         TestData data = new TestData();
 
         //Открытие браузера и вкладки с заданным адресом
-        open("/automation-practice-form");
+        open("https://demoqa.com/automation-practice-form");
 
         //Удаление рекламного блока и футера
         executeJavaScript("$('#fixedban').remove()");

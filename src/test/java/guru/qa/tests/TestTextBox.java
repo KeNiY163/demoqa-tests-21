@@ -11,19 +11,19 @@ public class TestTextBox extends BaseTest {
     TextBoxPage textBoxPage = new TextBoxPage();
 
     @Test
-    void testTextBox(){
+    void testTextBox() {
 
         textBoxPage.openPage()
-                        .setUserName(data.firstName + " " + data.lastName)
-                            .setUserEmail(data.email)
-                                .setCurrentAddress(data.currentAddress)
-                                    .setPermanentAddress(data.currentAddress)
-                                        .submitForm();
+                .setUserName(data.firstName + " " + data.lastName)
+                .setUserEmail(data.email)
+                .setCurrentAddress(data.currentAddress)
+                .setPermanentAddress(data.currentAddress)
+                .submitForm();
 
         textBoxPage.checkSubmitResultName(data.firstName + " " + data.lastName)
-                            .checkSubmitResultEmail(data.email)
-                                    .checkSubmitResultCurrentAddress(data.currentAddress)
-                                            .checkSubmitResultPermanentAddress(data.currentAddress);
+                .checkSubmitResultEmail(data.email)
+                .checkSubmitResultCurrentAddress(data.currentAddress)
+                .checkSubmitResultPermanentAddress(data.currentAddress);
 
     }
 

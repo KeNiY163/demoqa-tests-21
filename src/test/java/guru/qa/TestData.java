@@ -17,6 +17,7 @@ public class TestData {
     public String hobbieTwo = "Music";
     public String state = "Uttar Pradesh";
     public String city = "Merrut";
+    public String foto = "foto.jpg";
 
 
 

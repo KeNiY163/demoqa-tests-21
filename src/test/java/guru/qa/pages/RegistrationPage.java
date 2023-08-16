@@ -1,8 +1,8 @@
 package guru.qa.pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import guru.qa.pages.components.CalendarComponent;
+import guru.qa.pages.components.TableResultComponent;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -12,6 +12,7 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 public class RegistrationPage {
 
     CalendarComponent calendar = new CalendarComponent();
+    TableResultComponent table = new TableResultComponent();
 
     SelenideElement
                     firstName = $("#firstName"),
@@ -27,8 +28,7 @@ public class RegistrationPage {
                     state = $("#state"),
                     city = $("#city"),
                     stateCityWrapper = $("#stateCity-wrapper"),
-                    submit = $("#submit"),
-                    tableResponsive = $(".table-responsive");
+                    submit = $("#submit");
 
     public RegistrationPage openPage(){
 
@@ -141,7 +141,7 @@ public class RegistrationPage {
 
     public RegistrationPage checkResults(String value, String valueCheck) {
 
-        tableResponsive.$(byText(value)).parent().shouldHave(Condition.text(valueCheck));
+        table.checkResults(value, valueCheck);
 
         return this;
 

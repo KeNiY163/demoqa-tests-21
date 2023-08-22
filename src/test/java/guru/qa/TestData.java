@@ -1,24 +1,26 @@
 package guru.qa;
 
+import com.github.javafaker.Faker;
+import java.util.Locale;
+import static guru.qa.utils.DataTestGenerated.*;
+
 public class TestData {
 
-    public  String firstName = "Ivan";
-    public  String lastName = "Ivanov";
-    public  String email = "test@test.com";
-    public  String phone = "9998000001";
-    public  String subject = "Biology";
-    public  String currentAddress = "New-York, 13 Avenue, 2";
+    public static Faker faker = new Faker(new Locale("en"));
 
-    public String month = "October";
-    public String day = "15";
-    public String year = "1995";
-    public String gender = "Male";
-    public String hobbieOne = "Sports";
-    public String hobbieTwo = "Music";
-    public String state = "Uttar Pradesh";
-    public String city = "Merrut";
-    public String foto = "foto.jpg";
-
-
+    public static String firstName = getRandomFirstName(),
+            lastName = getRandomLastName(),
+            email = getRandomEmail(),
+            phone = getRandomPhoneNumber(),
+            subject = getRandomSubject(),
+            currentAddress = getRandomAddress(),
+            month = getRandomMonth(),
+            day = getRandomDay(),
+            year = getRandomYear(),
+            gender = getRandomGender(),
+            hobbie = getRandomHobie(),
+            state = getRandomState(),
+            city = getRandomCity(state),
+            foto = "foto.jpg";
 
 }

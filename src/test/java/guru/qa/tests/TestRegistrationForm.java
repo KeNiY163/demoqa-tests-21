@@ -8,10 +8,10 @@ import static guru.qa.TestData.*;
 
 public class TestRegistrationForm extends BaseTest {
 
+    RegistrationPage registrationPage = new RegistrationPage();
+
     @Test
     void testRegistrationForm() {
-
-        RegistrationPage registrationPage = new RegistrationPage();
 
         registrationPage
                 .openPage()

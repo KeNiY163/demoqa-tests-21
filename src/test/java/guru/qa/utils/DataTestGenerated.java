@@ -7,17 +7,7 @@ import static guru.qa.TestData.*;
 
 public class DataTestGenerated {
 
-    public static void main(String[] args) {
 
-        System.out.println(getRandomMonth());
-        System.out.println(getRandomFirstName());
-        System.out.println(getRandomGender());
-        System.out.println(getRandomLastName());
-        System.out.println(getRandomPhoneNumber());
-        System.out.println(getRandomHobie());
-        System.out.println(getRandomSubject());
-
-    }
     public static String getRandomFirstName() {
 
         return faker.name().firstName();

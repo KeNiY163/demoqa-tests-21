@@ -8,7 +8,8 @@ public class TestData {
 
     public static Faker faker = new Faker(new Locale("en"));
 
-    public static String firstName = getRandomFirstName(),
+    public static String
+            firstName = getRandomFirstName(),
             lastName = getRandomLastName(),
             email = getRandomEmail(),
             phone = getRandomPhoneNumber(),

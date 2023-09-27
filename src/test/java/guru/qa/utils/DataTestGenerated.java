@@ -91,9 +91,7 @@ public class DataTestGenerated {
 
     public  String getRandomState() {
 
-        String[] states =  {"NCR", "Uttar Pradesh", "Haryana", "Rajasthan"};
-
-        return new Faker().options().option(states);
+        return "Haryana";
     }
 
     public  String getRandomCity(String stateValue) {

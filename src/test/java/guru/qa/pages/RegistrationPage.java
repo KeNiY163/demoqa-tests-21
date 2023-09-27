@@ -32,7 +32,7 @@ public class RegistrationPage {
 
     public RegistrationPage openPage(){
 
-        open("automation-practice-form");
+        open("https://demoqa.com/automation-practice-form");
         deleteAdBanner();
 
         return this;

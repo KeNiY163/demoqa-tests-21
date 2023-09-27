@@ -41,9 +41,6 @@ public class BaseTest {
     @AfterAll
     public static void afterAll(){
 
-        Selenide.clearBrowserCookies();
-        Selenide.clearBrowserLocalStorage();
-        Selenide.closeWindow();
     }
 
 }

@@ -1,23 +1,51 @@
 plugins {
-    id 'java-library'
+    id 'java'
+    id 'io.qameta.allure' version '2.11.2'
 }
+
+group 'qa.guru'
+version '1.0-SNAPSHOT'
+
+allure {
+    report {
+        version.set("2.23.0")
+    }
+    adapter {
+        aspectjWeaver.set(true)
+        frameworks {
+            junit5 {
+                adapterVersion.set("2.23.0")
+            }
+        }
+    }
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 
 repositories {
     mavenCentral()
 }
 
-group 'guru.qa'
-version '1.0'
-
 dependencies {
-    testImplementation (
-            'com.codeborne:selenide:6.16.0',
-            'org.junit.jupiter:junit-jupiter:5.9.3'
-
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter-api:5.9.3',
+            'com.codeborne:selenide:6.17.2',
+            'io.qameta.allure:allure-selenide:2.23.0',
+            'com.github.javafaker:javafaker:1.0.2'
     )
-    implementation 'com.github.javafaker:javafaker:1.0.2'
+
+    runtimeOnly group: 'org.aspectj', name: 'aspectjrt', version: '1.9.19'
+
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.9.0')
 }
 
 test {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
+    jvmArgs "-noverify"
 }

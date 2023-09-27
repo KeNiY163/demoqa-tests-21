@@ -27,5 +27,4 @@ public class TestData {
             city = data.getRandomCity(state),
             foto = "foto.jpg";
 
-
 }

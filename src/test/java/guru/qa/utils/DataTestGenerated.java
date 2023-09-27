@@ -96,28 +96,7 @@ public class DataTestGenerated {
 
     public  String getRandomCity(String stateValue) {
 
-
-        switch (stateValue) {
-
-            case "NCR" -> {
-                String[] city = {"Delhi", "Gurgaon", "Noida"};
-                return new Faker().options().option(city);
-            }
-            case "Uttar Pradesh" -> {
-                String[] city = {"Agra", "Lucknow", "Merrut"};
-                return new Faker().options().option(city);
-            }
-            case "Haryana" -> {
-                String[] city = {"Karnal", "Panipat"};
-                return new Faker().options().option(city);
-            }
-            case "Rajasthan" -> {
-                String[] city = {"Jaipur", "Jaiselmer"};
-                return new Faker().options().option(city);
-            }
-        }
-
-        return null;
+        return "Karnal";
     }
 
 }

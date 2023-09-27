@@ -45,7 +45,12 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
-    systemProperties(System.getProperties())
-    jvmArgs "-noverify"
+
+    task first_test(type: Test) {
+        useJUnitPlatform {
+            includeTags("JenkinsTest")
+        }
+        systemProperties(System.getProperties())
+        jvmArgs "-noverify"
+    }
 }

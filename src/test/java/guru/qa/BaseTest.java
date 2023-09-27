@@ -7,6 +7,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class BaseTest {
@@ -42,7 +43,7 @@ public class BaseTest {
 
         Selenide.clearBrowserCookies();
         Selenide.clearBrowserLocalStorage();
-
+        Selenide.closeWindow();
     }
 
 }

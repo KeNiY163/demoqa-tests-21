@@ -51,6 +51,5 @@ test {
             includeTags("JenkinsTest")
         }
         systemProperties(System.getProperties())
-        jvmArgs "-noverify"
     }
 }

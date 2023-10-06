@@ -1,6 +1,7 @@
 package guru.qa.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import guru.qa.BaseTest;
 import guru.qa.pages.components.CalendarComponent;
 import guru.qa.pages.components.TableResultComponent;
 
@@ -9,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 
-public class RegistrationPage {
+public class RegistrationPage extends BaseTest {
 
     CalendarComponent calendar = new CalendarComponent();
     TableResultComponent table = new TableResultComponent();
@@ -30,9 +31,9 @@ public class RegistrationPage {
                     stateCityWrapper = $("#stateCity-wrapper"),
                     submit = $("#submit");
 
-    public RegistrationPage openPage(){
+    public RegistrationPage openPage(String url){
 
-        open("automation-practice-form");
+        open(url);
         deleteAdBanner();
 
         return this;

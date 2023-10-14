@@ -26,7 +26,7 @@ public class BaseTest {
         Configuration.browserVersion = System.getProperty("browserVersion", "118.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = false;
+        Configuration.holdBrowserOpen = true;
 
         Configuration.remote = System.getProperty("remoteDriver");;
 

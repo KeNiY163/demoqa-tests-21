@@ -31,9 +31,9 @@ public class RegistrationPage extends BaseTest {
                     stateCityWrapper = $("#stateCity-wrapper"),
                     submit = $("#submit");
 
-    public RegistrationPage openPage(String url){
+    public RegistrationPage openPage(){
 
-        open(url);
+        open("/automation-practice-form");
         deleteAdBanner();
 
         return this;

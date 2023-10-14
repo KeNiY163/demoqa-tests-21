@@ -21,9 +21,14 @@ public class BaseTest {
     @BeforeAll
     public static void beforeAll(){
 
-        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "118.0");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.pageLoadStrategy = "eager";
         Configuration.holdBrowserOpen = false;
+
+        Configuration.remote = System.getProperty("remoteDriver");;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
@@ -34,10 +39,6 @@ public class BaseTest {
 
 
         Configuration.browserCapabilities = capabilities;
-
-
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-
 
     }
 

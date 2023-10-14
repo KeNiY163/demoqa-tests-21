@@ -21,7 +21,7 @@ public class TestRegistrationForm extends BaseTest {
 
         step("Open page and form", () -> {
                     registrationPage
-                            .openPage("https://demoqa.com/automation-practice-form");
+                            .openPage("/automation-practice-form");
         });
         step("Fill form", () -> {
                     registrationPage

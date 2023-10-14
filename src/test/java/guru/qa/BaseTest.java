@@ -23,7 +23,7 @@ public class BaseTest {
 
         Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "118.0");
+        Configuration.browserVersion = System.getProperty("browserVersion", "117.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.pageLoadStrategy = "eager";
         Configuration.holdBrowserOpen = true;
